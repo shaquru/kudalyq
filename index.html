@@ -24,8 +24,8 @@
 html{scroll-behavior:smooth;overflow-x:clip}
 body{font-family:var(--font-sans);color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:clip;width:100%;max-width:100%;position:relative}
 /* Фон hero-bg на ВЕСЬ сайт (мягкий), сверху светлая вуаль */
-body::before{content:"";position:fixed;inset:0;z-index:-2;background:url('images/hero-bg.jpg') center top/cover no-repeat;opacity:.22}
-body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(251,245,244,.74),rgba(251,245,244,.88))}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:url('images/hero-bg.jpg') center top/cover no-repeat;opacity:2.2}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(251,245,244,.60),rgba(251,245,244,.74))}
 img{max-width:100%;display:block}
 
 /* ---------- Переключатель языка ---------- */
@@ -36,7 +36,7 @@ img{max-width:100%;display:block}
 [data-lang="ru"] .kz{display:none!important}
 
 /* ---------- Секции и типографика ---------- */
-.section{padding:34px 20px;position:relative}
+.section{padding:26px 20px;position:relative}
 .wrap{max-width:600px;margin:0 auto;text-align:center}
 .kicker{font-family:var(--font-sans);font-size:11.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--rose);margin-bottom:12px}
 .serif-body{font-family:var(--font-serif);font-size:clamp(18px,4.8vw,21px);line-height:1.72;color:#5c4d53}
@@ -48,10 +48,10 @@ img{max-width:100%;display:block}
 /* Кольца-эмблема */
 .rings{display:flex;justify-content:center;padding:14px 0 4px}
 .rings img{width:min(70%,320px);border-radius:16px;box-shadow:0 12px 30px rgba(168,90,114,.18)}
-.rings svg{width:150px;height:auto}
+.rings svg{width:200px;height:auto}
 
 /* ---------- Орнаментальный разделитель ---------- */
-.divider{display:flex;align-items:center;justify-content:center;gap:12px;max-width:280px;margin:2px auto;padding:8px 0}
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;max-width:280px;margin:0 auto;padding:2px 0}
 .divider .ln{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold))}
 .divider .ln:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
 .divider .orn{color:var(--gold);display:flex;align-items:center;gap:6px}
@@ -71,6 +71,7 @@ img{max-width:100%;display:block}
 .cal-grid .cd.event{color:var(--rose-deep);font-weight:700}
 .cal-grid .cd.event svg{position:absolute;top:50%;left:50%;width:36px;height:33px;transform:translate(-50%,-52%);z-index:0}
 .cal-grid .cd.event span{position:relative;z-index:1}
+.cal-grid .cd.event em{position:absolute;top:calc(50% + 13px);left:50%;transform:translateX(-50%);z-index:1;font-style:normal;font-family:var(--font-sans);font-size:7.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--rose);white-space:nowrap;pointer-events:none}
 .cal-cap{font-family:var(--font-sans);font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
 
 /* ---------- Обратный отсчёт ---------- */
@@ -80,7 +81,7 @@ img{max-width:100%;display:block}
 .count .lbl{font-family:var(--font-sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
 /* ---------- Карточки дата/место ---------- */
-.cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
+.cards{display:grid;grid-template-columns:1fr;gap:16px}
 .info{background:var(--card);border-radius:18px;padding:24px 22px;box-shadow:0 8px 24px rgba(168,90,114,.08);border:1px solid #f2e6ea}
 .info .ic{font-size:22px;color:var(--gold)}
 .info h3{font-family:var(--font-serif);font-weight:600;font-size:22px;margin:6px 0 2px}
@@ -95,16 +96,16 @@ img{max-width:100%;display:block}
 .map-btns a:hover{background:#fdf1f3;transform:translateY(-2px)}
 
 /* ---------- Блок хозяев ---------- */
-#names{padding:56px 20px;text-align:center;color:#fff;position:relative;overflow:hidden;background:linear-gradient(rgba(120,60,75,.5),rgba(90,45,60,.58)),url('images/hero-bg.jpg') center/cover no-repeat}
-#names .role{font-family:var(--font-sans);font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.92;margin-bottom:12px}
-#names .nm{font-family:var(--font-names);font-style:italic;font-weight:600;font-size:clamp(44px,12vw,72px);line-height:1.08;text-shadow:0 4px 22px rgba(0,0,0,.3)}
-#names .amp{color:#f4d9b0;padding:0 .05em}
+#names{padding:25px 20px;text-align:center;position:relative;overflow:hidden}
+#names .role{font-family:var(--font-sans);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:12px}
+#names .nm{font-family:var(--font-names);font-style:italic;font-weight:600;font-size:clamp(44px,12vw,72px);line-height:1.08;color:var(--rose-deep)}
+#names .amp{color:var(--gold);padding:0 .05em}
 
 /* ---------- RSVP ---------- */
-.rsvp-invite{margin-bottom:6px}
+.rsvp-invite{margin-bottom:18px}
 .rsvp-invite .flower{font-size:30px;line-height:1}
 .rsvp-invite .rt{font-family:var(--font-serif);font-size:26px;color:var(--rose-deep);margin-top:4px}
-.rsvp-box{background:var(--card);border-radius:20px;padding:26px 22px;margin-top:16px;box-shadow:0 12px 30px rgba(168,90,114,.12);border:1px solid #f2e6ea}
+.rsvp-box{background:var(--card);border-radius:20px;padding:15px 15px;margin-top:16px;box-shadow:0 12px 30px rgba(168,90,114,.12);border:1px solid #f2e6ea}
 .rsvp-choices{display:flex;gap:12px}
 .rsvp-choices button{flex:1;cursor:pointer;font-family:var(--font-sans);font-size:15px;font-weight:600;padding:16px 10px;border-radius:14px;border:1.5px solid #ecd9de;background:#fff;color:var(--ink);transition:all .2s;line-height:1.3}
 .rsvp-choices button .em{font-size:18px}
@@ -123,7 +124,7 @@ img{max-width:100%;display:block}
 
 /* ---------- Подвал ---------- */
 #footer{padding:44px 20px;text-align:center;position:relative}
-#footer .lead{font-family:var(--font-serif);font-size:18px;color:#6c5a5f;margin-bottom:14px}
+#footer .lead{font-family:var(--font-serif);font-size:18px;color:#6c5a5f;}
 #footer .fnames{font-family:var(--font-serif);font-weight:500;font-size:21px;color:#8a6f77;letter-spacing:.02em}
 #footer .fnames .amp{color:var(--gold);padding:0 .05em}
 #footer p{color:var(--muted);font-size:13px;margin-top:6px;letter-spacing:.03em}
@@ -134,7 +135,7 @@ img{max-width:100%;display:block}
 #music-btn.playing{animation:spin 6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}.section{padding:44px 20px}}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}.section{padding:20px 20px}}
 </style>
 </head>
 <body>
@@ -211,7 +212,6 @@ const CONFIG = {
       <div class="mon"><span class="kz">Қазан 2026</span><span class="ru">Октябрь 2026</span></div>
       <div class="cal-grid" id="cal"></div>
     </div>
-    <div class="cal-cap"><span class="kz">24 — той күні</span><span class="ru">24 — день торжества</span></div>
 
     <div class="kicker" style="margin-top:26px"><span class="kz">Тойға дейін</span><span class="ru">До торжества осталось</span></div>
     <div class="count" id="count">
@@ -275,11 +275,12 @@ const CONFIG = {
 <!-- ===== 6. RSVP ===== -->
 <section class="section">
   <div class="wrap reveal">
-    <div class="rsvp-invite">
-      <div class="flower">🌸</div>
-      <div class="rt"><span class="kz">Сіздерді күтеміз</span><span class="ru">Мы вас ждём</span></div>
-    </div>
+    <div class="kicker"><span class="kz">Қатысуыңызды растаңыз</span><span class="ru">Подтвердите присутствие</span></div>
     <div class="rsvp-box">
+      <div class="rsvp-invite">
+        <div class="flower">🌸</div>
+        <div class="rt"><span class="kz">Сіздерді күтеміз</span><span class="ru">Мы вас ждём</span></div>
+      </div>
       <div class="rsvp-choices">
         <button class="yes" onclick="choose(true,this)"><span class="em">🤍</span> <span class="kz">Келемін</span><span class="ru">Приду</span></button>
         <button class="no"  onclick="choose(false,this)"><span class="em">💔</span> <span class="kz">Келе алмаймын</span><span class="ru">Не смогу</span></button>
@@ -293,11 +294,13 @@ const CONFIG = {
   </div>
 </section>
 
+<div class="divider"><span class="ln"></span><span class="orn"><i></i><b>✦</b><i></i></span><span class="ln"></span></div>
+
 <!-- ===== ПОДВАЛ ===== -->
 <footer id="footer">
   <div class="lead"><span class="kz">Тойымыздың куәгері болыңыз</span><span class="ru">Будьте свидетелями нашего торжества</span></div>
   <div class="fnames">Талғат <span class="amp">&amp;</span> Ғалия</div>
-  <p><span class="kz">Махаббатпен, Қазан 2026</span><span class="ru">С любовью, октябрь 2026</span></p>
+  <p><span class="kz">Махаббатпен • қазан 2026</span><span class="ru">С любовью • октябрь 2026</span></p>
 </footer>
 
 <audio id="audio" loop preload="auto"></audio>
@@ -339,11 +342,12 @@ function buildCal(){
   const lead=(new Date(y,m,1).getDay()+6)%7;
   const days=new Date(y,m+1,0).getDate();
   const heart='<svg viewBox="0 0 32 29"><path d="M16 27.5l-1.9-1.7C7.6 20 4 16.7 4 12.7 4 9.4 6.6 6.8 9.9 6.8c1.9 0 3.7.9 4.9 2.3l1.2 1.4 1.2-1.4c1.2-1.4 3-2.3 4.9-2.3 3.3 0 5.9 2.6 5.9 5.9 0 4-3.6 7.3-10.1 13.1L16 27.5z" fill="none" stroke="#c9a24b" stroke-width="1.6"/></svg>';
+  const cap = cur==='kz' ? 'той күні' : 'день торжества';
   let h='';
   wd.forEach(w=>h+='<div class="wd">'+w+'</div>');
   for(let i=0;i<lead;i++) h+='<div class="cd empty"></div>';
   for(let d=1;d<=days;d++){
-    h += d===day ? '<div class="cd event">'+heart+'<span>'+d+'</span></div>' : '<div class="cd">'+d+'</div>';
+    h += d===day ? '<div class="cd event">'+heart+'<span>'+d+'</span><em>'+cap+'</em></div>' : '<div class="cd">'+d+'</div>';
   }
   document.getElementById('cal').innerHTML=h;
 }
